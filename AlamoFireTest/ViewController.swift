@@ -65,6 +65,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func btnCharge(_ sender: Any) {
+
+        Alamofire.request("https://www.services.renault-ze.com/api/user/login").responseJSON { response in
+                debugPrint(response)
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
